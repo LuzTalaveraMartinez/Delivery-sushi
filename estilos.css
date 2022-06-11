@@ -121,7 +121,7 @@ nav {
     width: 90%;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    max-width: 1000px;
     height: inherit;
     overflow: hidden;
 }
@@ -435,7 +435,7 @@ footer p {
     .enlaces {
         position: fixed;
         top: 80px;
-        background: #2c3e50;
+        background: #838485;
         left: 0;
         height: 100%;
         transition: 1s;
@@ -448,7 +448,7 @@ footer p {
         height: 50px;
         padding: 20px;
         text-align: center;
-        background: #34495e;
+        background: #838485;
         color: #fff;
         font-family: "Ubuntu", sans-serif;
     }
@@ -486,70 +486,78 @@ footer p {
     }
 }
 
-@media screen and (max-width: 455px) {
-    .nav2 {
-        color: #fff;
+@media screen and (max-width: 500px) {
+     :root {
+        --espacios-contenido: 25px;
     }
-    .icono {
-        display: block;
-        cursor: pointer;
+    .textos h1 {
+        padding: 1%;
+        font-size: 35px;
+        letter-spacing: 2px;
+        margin-top: -25px;
     }
-    .enlaces {
-        position: fixed;
-        top: 80px;
-        background: #2c3e50;
-        left: 0;
-        height: 100%;
-        transition: 1s;
-        width: 0;
-        overflow: hidden;
-    }
-    .enlaces a {
-        display: block;
-        width: 100%;
-        height: 50px;
-        padding: 20px;
-        text-align: center;
-        background: #34495e;
-        color: #fff;
+    .textos h2 {
+        font-size: 17px;
+        letter-spacing: 2px;
         font-family: "Ubuntu", sans-serif;
-    }
-    .textos {
-        margin-top: -131px;
-    }
-    .textos>h1 {
-        font-size: 47px;
-        margin-top: 20px;
-    }
-    .textos>h2 {
-        font-size: 15px;
-        margin-bottom: 20%;
+        margin-bottom: 40px;
     }
     .textos .boton {
         padding: 1%;
-        margin-top: 8%;
-        width: auto;
+        margin-top: 10%;
         font-size: 15px;
     }
     .textos .titulo01 {
         font-size: 13px;
         margin: 1% 0;
         color: #fafafd;
-        margin-top: 10px;
+        margin-top: 58px;
     }
     .textos .titulo02 {
         font-size: 13px;
-        margin: 0 2%;
+        margin: 0 -2%;
         color: #fafafd;
+    }
+    .content-card {
+        width: 90%;
+    }
+    .caja-servicios {
+        width: 90%;
+        margin-bottom: var(--margenes);
+    }
+    .cont-work {
+        width: 85%;
+    }
+    .marca-logo {
+        width: 80%;
+    }
+    .iconos {
+        margin: auto;
     }
 }
 
-@media screen and (max-width: 340px) {
+main .contenedor .boton {
+    padding: 10px 30px;
+    background-color: #edeef2;
+    color: rgb(11, 11, 11);
+    border: none;
+    margin-top: -70px;
+    margin-left: 125px;
+    box-shadow: 1px 4px 20px -15px rgba(246, 249, 248, 0.313);
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+    width: 170px;
+}
+
+@media screen and (max-width: 341px) {
      :root {
         --espacios-contenido: 25px;
     }
-    .nav2 {
+    .nav {
         color: #fff;
+        width: 100%;
+        position: fixed;
     }
     .icono {
         display: block;
@@ -571,26 +579,26 @@ footer p {
         height: 50px;
         padding: 20px;
         text-align: center;
-        background: #34495e;
+        background: #505152;
         color: #fff;
         font-family: "Ubuntu", sans-serif;
     }
     .textos h1 {
-        padding: 1% auto;
+        padding: 1%;
         font-size: 35px;
         letter-spacing: 2px;
-        margin-top: 5px;
+        margin-top: -25px;
     }
     .textos h2 {
-        font-size: 19px;
+        font-size: 17px;
         letter-spacing: 2px;
         font-family: "Ubuntu", sans-serif;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
     }
     .textos .boton {
         padding: 1%;
-        margin-top: 15%;
-        font-size: 14px;
+        margin-top: 10%;
+        font-size: 15px;
     }
     .textos .titulo01 {
         font-size: 13px;
