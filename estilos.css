@@ -162,16 +162,16 @@ nav .enlaces a:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: rgb(239, 233, 233);
     overflow: hidden;
     text-align: center;
-    padding-top: 240px;
+    padding-top: 170px;
 }
 
 .textos>h1 {
     font-size: 80px;
     font-family: "Open Sans", sans-serif;
-    padding: 20px auto;
+    padding: 20px 2%;
 }
 
 .textos>h2 {
@@ -230,13 +230,13 @@ nav .enlaces a:hover {
 /* Main */
 
 main {
-    background: #212020;
+    background-color: #212020;
 }
 
 .contenedor {
     margin: auto;
     padding: var(--margenes) 0;
-    width: 90%;
+    width: 100%s;
     max-width: 1000px;
     text-align: center;
     overflow: hidden;
@@ -255,6 +255,10 @@ main {
     font-weight: 300;
     color: var(--color1);
     font-family: "Ubuntu", sans-serif;
+}
+
+.contenedor img {
+    background-image: none;
 }
 
 .after::after {
@@ -299,8 +303,9 @@ main {
 }
 
 .about {
-    background: #212020;
+    background: #07070756;
     height: auto;
+    border: none;
 }
 
 .servicios {
@@ -315,7 +320,7 @@ main {
     width: 30%;
     margin: auto;
     text-align: center;
-    background-color: #212020;
+    background-color: inherit;
 }
 
 .caja-servicios>h4 {
@@ -338,20 +343,20 @@ main {
     margin-left: var(--espacios);
     margin-bottom: var(--espacios-contenido);
     padding: 6px 12px;
-    border: 1px solid var(--color1);
+    border: 1px solid white;
     list-style: none;
     color: var(--color1);
 }
 
 .botones-work li:hover {
-    background: var(--color1);
+    background: rgba(96, 95, 95, 0.459);
     color: #fff;
     cursor: pointer;
 }
 
 .botones-work .active {
     background: var(--color1);
-    color: #fff;
+    color: rgb(41, 39, 39);
 }
 
 .galeria-work {
@@ -361,6 +366,8 @@ main {
 }
 
 .cont-work {
+    background-color: rgba(240, 236, 236, 0.067);
+    color: #efe9e9;
     width: 31%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
     height: 300px;
@@ -387,6 +394,38 @@ main {
     line-height: 30px;
     font-weight: 300;
     letter-spacing: 3px;
+}
+
+main .boton-pedi-aca {
+    background-color: inherit;
+    color: rgb(10, 10, 240);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: auto;
+    text-transform: uppercase;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+main .boton-pedi-aca a {
+    background-color: inherit;
+    color: #fafafd;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 150px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 1%;
 }
 
 
@@ -427,6 +466,17 @@ footer p {
 @media screen and (max-width: 640px) {
     .nav2 {
         color: #fff;
+    }
+    .logo {
+        overflow: hidden;
+        position: fixed;
+        top: 80px;
+        background: #838485;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        width: 0;
+        overflow: hidden;
     }
     .icono {
         display: block;
@@ -587,13 +637,13 @@ main .contenedor .boton {
         padding: 1%;
         font-size: 35px;
         letter-spacing: 2px;
-        margin-top: -25px;
+        margin-top: -85px;
     }
     .textos h2 {
         font-size: 17px;
         letter-spacing: 2px;
         font-family: "Ubuntu", sans-serif;
-        margin-bottom: 40px;
+        margin-bottom: 130px;
     }
     .textos .boton {
         padding: 1%;
@@ -621,10 +671,19 @@ main .contenedor .boton {
     .cont-work {
         width: 85%;
     }
+    .botones-work li {
+        margin-right: -1px;
+        width: 21%;
+        height: 30px;
+        padding: 2px 5px;
+    }
     .marca-logo {
         width: 80%;
     }
     .iconos {
         margin: auto;
+    }
+    .boton-pedi-aca a {
+        background-color: #efe9e931;
     }
 }
