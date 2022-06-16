@@ -91,7 +91,7 @@ img {
 header {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( to bottom, rgba(3, 3, 3, 0.692), rgba(25, 26, 26, 0.692), rgba(44, 43, 43, 0.45)), url("img/fuego.jpg");
+    background: linear-gradient( to bottom, rgba(3, 3, 3, 0.692), rgba(44, 43, 43, 0.199), rgba(26, 25, 25, 0.473)), url("img/fuego.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -128,31 +128,42 @@ nav {
 
 nav .enlaces a {
     display: inline-block;
-    padding: 5px 0;
     margin-right: 17px;
     font-size: 17px;
     font-weight: 300;
+    padding: 20px;
+    height: 80px;
     text-decoration: none;
-    border-bottom: 3px solid transparent;
     color: inherit;
+    border-bottom: 3px solid transparent;
     font-family: "Ubuntu", sans-serif;
+    background-color: inherit;
+    font-size: 20px;
 }
 
 nav .enlaces a:hover {
-    border-bottom: 3px solid #7d7f80;
+    color: rgb(243, 242, 242);
     transition: 0.6s;
+    background: #7e7d7d81;
 }
 
 .logo,
 .logo img {
     height: 60px;
-    background: inherit;
+}
+
+.about .after01 {
+    margin-bottom: 30px;
 }
 
 .icono {
     display: none;
     font-size: 24px;
-    padding: 23.5px 20px;
+    padding: 20.5px 10px;
+}
+
+.icono span {
+    color: #f2f4f5;
 }
 
 .textos {
@@ -162,42 +173,42 @@ nav .enlaces a:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: rgb(239, 233, 233);
+    color: rgb(242, 238, 238);
     overflow: hidden;
     text-align: center;
-    padding-top: 170px;
+    padding-top: 180px;
 }
 
 .textos>h1 {
     font-size: 80px;
     font-family: "Open Sans", sans-serif;
-    padding: 20px 2%;
+    padding: 20px auto;
+    margin-bottom: 20px;
 }
 
 .textos>h2 {
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
-    letter-spacing: 10px;
-    padding: 10px;
+    letter-spacing: 2px;
+    padding: 5px;
     font-weight: lighter;
     font-family: "Ubuntu", sans-serif;
-    margin-bottom: 80px;
+    margin-bottom: 160px;
 }
 
 .textos .boton {
     background-color: inherit;
     color: rgb(250, 250, 253);
-    border: none;
     cursor: pointer;
     border-radius: 5px;
-    border: none;
     height: 30px;
     width: auto;
     text-transform: uppercase;
     padding-top: 5px;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 15px;
+    border: none;
 }
 
 .textos .boton a {
@@ -211,7 +222,7 @@ nav .enlaces a:hover {
     width: 150px;
     text-transform: uppercase;
     text-decoration: none;
-    padding-top: 5px;
+    padding: 20px 2px;
     margin-top: 10px;
     margin-bottom: 1%;
 }
@@ -230,28 +241,34 @@ nav .enlaces a:hover {
 /* Main */
 
 main {
-    background-color: #212020;
+    width: auto;
+    background: linear-gradient( to bottom, rgba(2, 2, 2, 0.822), rgba(12, 12, 12, 0.74), rgba(26, 25, 25, 0.747)), url("img/IMG_7749.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contenedor {
     margin: auto;
     padding: var(--margenes) 0;
-    width: 100%s;
+    width: 100vw;
     max-width: 1000px;
     text-align: center;
     overflow: hidden;
 }
 
 .contenedor h3 {
-    font-size: var(--titulos);
+    font-size: 25px;
     color: var(--color1);
     margin-bottom: var(--espacios);
+    margin-top: 30px;
     text-transform: uppercase;
     font-family: "Ubuntu", sans-serif;
 }
 
 .contenedor p {
-    font-size: var(--subtitulos);
+    font-size: 17px;
     font-weight: 300;
     color: var(--color1);
     font-family: "Ubuntu", sans-serif;
@@ -259,17 +276,23 @@ main {
 
 .contenedor img {
     background-image: none;
+    width: auto;
 }
 
 .after::after {
     content: "";
     display: block;
     margin: auto;
-    margin-top: var(--espacios);
+    margin-top: 20px;
     width: 100px;
     height: 2px;
     background: var(--color1);
     margin-bottom: var(--espacios-contenido);
+}
+
+main .contenedor .productos {
+    font-size: 30px;
+    padding-bottom: 20px;
 }
 
 .card {
@@ -303,12 +326,35 @@ main {
 }
 
 .about {
-    background: #07070756;
-    height: auto;
-    border: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #202120;
 }
 
-.servicios {
+.about .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 50%;
+    padding: 2px;
+}
+
+.about .contenedor h3 {
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+    width: 60%;
+    font-size: 32px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.about .contenedor .servicios {
     display: flex;
     color: #fff;
     justify-content: space-between;
@@ -334,7 +380,8 @@ main {
 }
 
 .botones-work {
-    overflow: hidden;
+    margin-bottom: 15px;
+    width: auto;
 }
 
 .botones-work li {
@@ -342,37 +389,41 @@ main {
     text-align: center;
     margin-left: var(--espacios);
     margin-bottom: var(--espacios-contenido);
-    padding: 6px 12px;
+    padding: 6px;
+    margin: 4px 1%;
     border: 1px solid white;
+    background: none;
+    border-radius: 2px;
     list-style: none;
     color: var(--color1);
 }
 
 .botones-work li:hover {
-    background: rgba(96, 95, 95, 0.459);
-    color: #fff;
+    background: #cefc03;
+    color: #0c0c0c;
     cursor: pointer;
 }
 
 .botones-work .active {
-    background: var(--color1);
-    color: rgb(41, 39, 39);
+    background: none;
+    color: rgb(249, 247, 247);
 }
 
 .galeria-work {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: 90%;
 }
 
 .cont-work {
-    background-color: rgba(240, 236, 236, 0.067);
+    background: inherit;
     color: #efe9e9;
-    width: 31%;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
-    height: 300px;
+    width: 30%;
+    box-shadow: 0 0 6px 0 #00000080;
     overflow: hidden;
     margin-bottom: var(--espacios-contenido);
+    margin: 32px 3px;
 }
 
 .img-work {
@@ -387,10 +438,23 @@ main {
 }
 
 .textos-work {
-    height: 10%;
+    height: 40px;
+    margin-bottom: 30px;
 }
 
 .textos-work h4 {
+    line-height: 30px;
+    background-color: rgba(189, 184, 184, 0.123);
+    color: rgb(255, 254, 254);
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.textos-work .descripcion {
+    height: 20px;
+    font-size: 5px;
     line-height: 30px;
     font-weight: 300;
     letter-spacing: 3px;
@@ -432,40 +496,97 @@ main .boton-pedi-aca a {
 /* Footer */
 
 footer {
-    background: url(img/teclado.jpg);
+    background-color: #212020;
+    height: 90%;
 }
 
-.marca-logo {
+.contenedor-footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-footer .marca-logo {
     width: 40%;
-    margin: auto;
+    height: 90%;
     margin-bottom: var(--espacios);
+    margin-top: 20px;
+    text-align: center;
 }
 
-.marca-logo img {
-    width: 100%;
+.marca-logo .titulo-footer {
+    color: rgb(248, 246, 246);
+    font-size: 55px;
+    margin-top: 70px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contenedor-footer .marca-logo .info {
+    color: rgb(248, 246, 246);
+    font-size: 27px;
+    margin-bottom: 65px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contenedor-footer .seguinos {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.caja {
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.caja .copyright p {
+    color: #faf8f8;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.caja .copyright p a {
+    color: #f7f2f2;
+    font-size: 13px;
 }
 
 .iconos {
     display: flex;
-    margin: auto;
-    justify-content: space-around;
+    margin: 15px;
+    margin-top: 70px;
+    justify-content: center;
     width: 100%;
 }
 
 .fab {
     font-size: 60px;
     color: #fff;
-    margin-bottom: var(--espacios);
+    margin: 10px 20px;
+    margin-bottom: 10px;
     display: inline-block;
 }
 
-footer p {
-    margin-top: var(--espacios);
+.contenedor-footer .caja .copyright p {
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 640px) {
     .nav2 {
         color: #fff;
+    }
+    .icono {
+        display: block;
+        cursor: pointer;
     }
     .logo {
         overflow: hidden;
@@ -478,14 +599,10 @@ footer p {
         width: 0;
         overflow: hidden;
     }
-    .icono {
-        display: block;
-        cursor: pointer;
-    }
     .enlaces {
         position: fixed;
         top: 80px;
-        background: #838485;
+        background: #5f5f5f;
         left: 0;
         height: 100%;
         transition: 1s;
@@ -504,11 +621,12 @@ footer p {
     }
     .textos>h1 {
         font-size: 55px;
-        margin-top: -2%;
+        margin-top: -15%;
     }
     .textos>h2 {
         font-size: 15px;
-        margin-bottom: 2%;
+        margin-bottom: 45%;
+        margin-top: -25px;
     }
     .textos .boton {
         padding: 1%;
@@ -516,13 +634,13 @@ footer p {
         width: auto;
         font-size: 15px;
     }
-    .textos .titulo01 {
+    .contenedor .titulo01 {
         font-size: 14px;
         margin: 1% 0;
         color: #fafafd;
         margin-top: 22px;
     }
-    .textos .titulo02 {
+    .contenedor .titulo02 {
         font-size: 14px;
         margin: 0 2%;
         color: #fafafd;
@@ -534,23 +652,36 @@ footer p {
      :root {
         --margenes: 30px;
     }
+    .galeria-work {
+        width: 100%;
+    }
+    .cont-work {
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 500px) {
      :root {
         --espacios-contenido: 25px;
     }
+    .nav1 {
+        color: #fff;
+        width: 100%;
+        background: inherit;
+        position: fixed;
+    }
     .textos h1 {
         padding: 1%;
         font-size: 35px;
         letter-spacing: 2px;
-        margin-top: -25px;
+        margin-top: -75px;
+        margin-bottom: 10px;
     }
     .textos h2 {
         font-size: 17px;
         letter-spacing: 2px;
         font-family: "Ubuntu", sans-serif;
-        margin-bottom: 40px;
+        margin-bottom: 280px;
     }
     .textos .boton {
         padding: 1%;
@@ -561,7 +692,7 @@ footer p {
         font-size: 13px;
         margin: 1% 0;
         color: #fafafd;
-        margin-top: 58px;
+        margin-top: 5px;
     }
     .textos .titulo02 {
         font-size: 13px;
@@ -593,34 +724,63 @@ main .contenedor .boton {
     border: none;
     margin-top: -70px;
     margin-left: 125px;
-    box-shadow: 1px 4px 20px -15px rgba(246, 249, 248, 0.313);
+    box-shadow: 1px 4px 20px -15px #f6f9f850;
     cursor: pointer;
     border-radius: 5px;
     height: 40px;
     width: 170px;
 }
 
-@media screen and (max-width: 341px) {
+@media screen and (max-width: 460px) {
+    footer {
+        width: 100%;
+    }
+    .contenedor-footer {
+        width: 100vw;
+        height: 100vh;
+    }
+    .contenedor-footer .marca-logo .titulo-footer {
+        width: 100%;
+        font-size: 40px;
+    }
+    .contenedor-footer .marca-logo .info {
+        font-size: 17px;
+    }
+    .contenedor-footer .seguinos {
+        color: white;
+        font-size: 17px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 356px) {
      :root {
         --espacios-contenido: 25px;
     }
-    .nav {
-        color: #fff;
-        width: 100%;
-        position: fixed;
-    }
     .icono {
         display: block;
+        background: inherit;
         cursor: pointer;
+        color: white;
+    }
+    .nav1 {
+        color: rgb(243, 239, 239);
+        width: 100vw;
+        height: auto;
+        background: inherit;
+        position: fixed;
     }
     .enlaces {
         position: flex;
         top: 80px;
-        background: #2c3e50;
+        background: #292929;
         left: 0;
         height: 100%;
         transition: 1s;
-        width: 0;
+        width: 100%;
         overflow: hidden;
     }
     .enlaces a {
@@ -635,31 +795,36 @@ main .contenedor .boton {
     }
     .textos h1 {
         padding: 1%;
-        font-size: 35px;
+        font-size: 25px;
         letter-spacing: 2px;
-        margin-top: -85px;
+        margin-top: -105px;
     }
     .textos h2 {
         font-size: 17px;
         letter-spacing: 2px;
         font-family: "Ubuntu", sans-serif;
-        margin-bottom: 130px;
+        margin-bottom: 320px;
+        margin-top: 5px;
     }
     .textos .boton {
         padding: 1%;
-        margin-top: 10%;
+        margin-top: 1%;
         font-size: 15px;
     }
     .textos .titulo01 {
         font-size: 13px;
         margin: 1% 0;
         color: #fafafd;
-        margin-top: 58px;
+        margin-top: 25px;
     }
     .textos .titulo02 {
         font-size: 13px;
-        margin: 0 -2%;
+        margin: 0 -1%;
         color: #fafafd;
+    }
+    .contenedor .productos {
+        font-size: 17px;
+        text-align: center;
     }
     .content-card {
         width: 90%;
@@ -671,19 +836,106 @@ main .contenedor .boton {
     .cont-work {
         width: 85%;
     }
+    .botones-work {
+        background-color: inherit;
+    }
     .botones-work li {
         margin-right: -1px;
         width: 21%;
         height: 30px;
         padding: 2px 5px;
     }
+    main .about {
+        width: 100%;
+        height: 100vh;
+    }
+    main .about .contenedor {
+        width: 100%;
+        padding: 10px 25px;
+    }
+    main .about .contenedor h3 {
+        font-size: 23px;
+        padding: 2px;
+        width: 100%;
+    }
     .marca-logo {
-        width: 80%;
+        width: 90%;
     }
     .iconos {
         margin: auto;
     }
     .boton-pedi-aca a {
         background-color: #efe9e931;
+    }
+    .galeria-work {
+        width: 100%;
+        height: 90%;
+        background: linear-gradient( to bottom, rgba(3, 3, 3, 0.692), rgba(44, 43, 43, 0.199), rgba(26, 25, 25, 0.473)), url("img/fondo-madera.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+    }
+    .galeria-work .cont-work {
+        width: 70%;
+        height: 260px;
+        box-shadow: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
+    .galeria-work .cont-work .img-work {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: auto;
+        height: 85%;
+    }
+    .galeria-work .cont-work .textos-work h4 {
+        width: 100%;
+        height: 30px;
+        color: #eee7e7;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        background: rgba(31, 30, 30, 0.514);
+        padding: 0px 2px;
+    }
+    .contenedor-footer {
+        height: 100vh;
+        width: 100%;
+    }
+    .contenedor-footer .marca-logo {
+        width: 100%;
+    }
+    .contenedor-footer .marca-logo .titulo-footer {
+        font-size: 35px;
+        padding: 10px;
+    }
+    .contenedor-footer .iconos {
+        margin-bottom: -20px;
+    }
+    .contenedor-footer .iconos a {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+    .contenedor-footer .caja {
+        font-size: 10px;
+        text-align: center;
+    }
+    .contenedor-footer .caja .copyright p br {
+        margin-bottom: 10px;
+        font-size: 10px;
     }
 }
